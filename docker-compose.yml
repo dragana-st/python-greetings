@@ -1,0 +1,19 @@
+services:
+  greetings-app-dev:
+    build: python-greetings
+    image: draganast/python-greetings-app:latest
+    container_name: greetings-app-dev
+    ports:
+      - "7001:3000"
+  greetings-app-stg:
+    build: python-greetings
+    image: draganast/python-greetings-app:latest
+    container_name: greetings-app-stg
+    ports:
+      - "7002:3000"
+  greetings-app-prod:
+    build: python-greetings
+    image: draganast/python-greetings-app:latest
+    container_name: greetings-app-prod
+    ports:
+      - "7003:3000"
